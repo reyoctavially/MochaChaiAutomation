@@ -1,0 +1,17 @@
+{
+  "name": "mochachai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.12.2",
+    "chai": "^6.0.1",
+    "mocha": "^11.7.2"
+  }
+}
