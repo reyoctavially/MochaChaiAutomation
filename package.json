@@ -12,6 +12,7 @@
   "devDependencies": {
     "axios": "^1.12.2",
     "chai": "^6.0.1",
+    "dotenv": "^17.2.2",
     "mocha": "^11.7.2",
     "mochawesome": "^7.1.4"
   }
