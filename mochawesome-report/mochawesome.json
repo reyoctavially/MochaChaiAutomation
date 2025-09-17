@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-17T03:09:25.761Z",
+    "end": "2025-09-17T03:09:26.283Z",
+    "duration": 522,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d2ca6e44-dda2-4ac1-8f5e-eb94f755cc36",
+      "title": "",
+      "fullFile": "E:\\Work\\Automation Test\\MochaChai\\test\\api.test.js",
+      "file": "\\test\\api.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5269eb72-1216-408c-a011-3b76a09086dc",
+          "title": "Testing API JSONPlaceholder",
+          "fullFile": "E:\\Work\\Automation Test\\MochaChai\\test\\api.test.js",
+          "file": "\\test\\api.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET /posts harus mengembalikan list post",
+              "fullTitle": "Testing API JSONPlaceholder GET /posts harus mengembalikan list post",
+              "timedOut": false,
+              "duration": 220,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.get(\"https://jsonplaceholder.typicode.com/posts\");\nexpect(res.status).to.equal(200);\nexpect(res.data).to.be.an(\"array\");\nexpect(res.data[0]).to.have.property(\"userId\");",
+              "err": {},
+              "uuid": "d32e113b-e6d5-4f6e-8ccf-7e3c0188ae60",
+              "parentUUID": "5269eb72-1216-408c-a011-3b76a09086dc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET /posts/1 harus mengembalikan 1 post dengan id 1",
+              "fullTitle": "Testing API JSONPlaceholder GET /posts/1 harus mengembalikan 1 post dengan id 1",
+              "timedOut": false,
+              "duration": 31,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.get(\"https://jsonplaceholder.typicode.com/posts/1\");\nexpect(res.status).to.equal(200);\nexpect(res.data).to.have.property(\"id\", 1);\nexpect(res.data).to.have.property(\"title\");",
+              "err": {},
+              "uuid": "0d319a03-b228-4bb0-983a-64c530cf4e7b",
+              "parentUUID": "5269eb72-1216-408c-a011-3b76a09086dc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST /posts harus bisa membuat data baru (mock API)",
+              "fullTitle": "Testing API JSONPlaceholder POST /posts harus bisa membuat data baru (mock API)",
+              "timedOut": false,
+              "duration": 262,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const payload = { title: \"Belajar Mocha Chai\", body: \"Mantap!\", userId: 1 };\nconst res = await axios.post(\"https://jsonplaceholder.typicode.com/posts\", payload);\nexpect(res.status).to.equal(201); // created\nexpect(res.data).to.include(payload);\nexpect(res.data).to.have.property(\"id\"); // fake ID dari JSONPlaceholder",
+              "err": {},
+              "uuid": "33ce438e-5558-4478-a22a-37f7cda04017",
+              "parentUUID": "5269eb72-1216-408c-a011-3b76a09086dc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d32e113b-e6d5-4f6e-8ccf-7e3c0188ae60",
+            "0d319a03-b228-4bb0-983a-64c530cf4e7b",
+            "33ce438e-5558-4478-a22a-37f7cda04017"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 513,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.0"
+    }
+  }
+}
